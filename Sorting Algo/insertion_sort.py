@@ -1,6 +1,7 @@
 print("Insertion sort")
 print("__" * 30)
-
+#Best case O(n)
+#Worst case O(n^2)
 arr = [3, 6, 4, 1, 7, 9, 2]
 n = len(arr)
 
@@ -18,4 +19,5 @@ def insert(pos, val):
 
 for i in range(1, n):
     insert(i, arr[i])
+    print(arr)
 

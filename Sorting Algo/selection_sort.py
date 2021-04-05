@@ -1,4 +1,4 @@
-#Best case, worst O(n^2)
+#Best case, worst case:  O(n^2)
 print("Selection sort")
 print("__"*30)
 arr = [3, 6, 4, 1, 7, 9, 2]

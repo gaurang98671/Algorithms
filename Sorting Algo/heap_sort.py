@@ -1,4 +1,5 @@
 arr = [1, 12, 9, 5, 6, 10]
+
 n = len(arr)
 new_arr = []
 

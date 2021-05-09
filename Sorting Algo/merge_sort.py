@@ -38,7 +38,7 @@ def merge_sort(arr):
             k += 1
 
 
-a = [5, 4, 3, 2, 1]
+a = [2, 4, 3, 5, 1]
 print("Unsorted array: ", a)
 merge_sort(a)
 print("Sorted array: ", a)

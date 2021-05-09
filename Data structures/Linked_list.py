@@ -17,15 +17,37 @@ class LinkedList:
 
     def get_all(self):
         if self.root.next != None:
-            node = self.root.next
+            node = self.root
             while node.next is not None:
                 print(node.val)
                 node = node.next
             print(node.val)
         else:
             print("Linked list is empty")
+    def delete_node(self, val):
+        prev_node = self.root
+        node = self.root.next
+
+
+        while node.next != None:
+            if node.val == val:
+                prev_node.next = node.next
+
+                return  "value deleted"
+            else:
+                prev_node = node
+                node = node.next
+
+        if node.val==val:
+            prev_node.next = None
+            return "value deleted"
+        return "value not found"
 
 
 ll = LinkedList()
-
+ll.add_node(1)
+ll.add_node(2)
+ll.add_node(3)
+ll.get_all()
+print(ll.delete_node(2))
 ll.get_all()

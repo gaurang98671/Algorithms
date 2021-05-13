@@ -70,5 +70,5 @@ ll.get_all()
 ll.get_all()
 
 ll.reverse()
-print("Get all")
+
 ll.get_all()

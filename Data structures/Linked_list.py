@@ -17,11 +17,12 @@ class LinkedList:
 
     def get_all(self):
         if self.root.next != None:
-            node = self.root
-            while node.next is not None:
+
+            node = self.root.next
+            while node is not None:
                 print(node.val)
                 node = node.next
-            print(node.val)
+
         else:
             print("Linked list is empty")
     def delete_node(self, val):
@@ -43,11 +44,31 @@ class LinkedList:
             return "value deleted"
         return "value not found"
 
+    def reverse(self):
+        node = self.root.next
+        prev_node = None
+
+        while node is not None:
+
+            next_node = node.next
+            node.next = prev_node
+            prev_node = node
+            node = next_node
+        self.root.next = prev_node
+
+
+
+
+
 
 ll = LinkedList()
 ll.add_node(1)
 ll.add_node(2)
 ll.add_node(3)
 ll.get_all()
-print(ll.delete_node(2))
+
+ll.get_all()
+
+ll.reverse()
+print("Get all")
 ll.get_all()

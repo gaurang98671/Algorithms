@@ -1,6 +1,4 @@
 arr = [1,2,3,4,5,6,7,8,9]
-num = 3
-
 
 def search(num):
 
@@ -17,7 +15,7 @@ def search(num):
             print(arr[mid])
             low = mid + 1
         else:
-            return True
+            return True, mid
     return False
 
-print(search(20))
+print(search(2))

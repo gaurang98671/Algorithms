@@ -5,13 +5,35 @@ class Node:
         self.right = None
 
 
-def inorder(temp):
+def inOrder(temp):
 
     if not temp:
         return
-    inorder(temp.left)
+    inOrder(temp.left)
     print(temp.val)
-    inorder(temp.right)
+    inOrder(temp.right)
+
+
+def preOrder(temp):
+
+    if not temp:
+        return
+    print(temp.val)
+    preOrder(temp.left)
+
+    preOrder(temp.right)
+
+
+def postOrder(temp):
+
+    if not temp:
+        return
+    postOrder(temp.left)
+
+    postOrder(temp.right)
+
+    print(temp.val)
+
 
 if __name__ == '__main__':
     root = Node(11)
@@ -19,5 +41,5 @@ if __name__ == '__main__':
     root.right = Node(13)
     root.left.left = Node(14)
 
-    inorder(root)
+    preOrder(root)
 

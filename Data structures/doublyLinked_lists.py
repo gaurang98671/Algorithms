@@ -9,6 +9,8 @@ class LinkedList:
     def __init__(self):
         self.root = Node(None, None, None)
 
+
+
     def add_node(self, val):
         node = self.root
         while node.next is not None:
@@ -21,7 +23,7 @@ class LinkedList:
 
             node = self.root.next
             while node is not None:
-                
+
                 print("Address", str(node),"Value",node.val,"Previous",  node.prev, "Next",node.next)
                 node = node.next
 

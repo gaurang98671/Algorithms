@@ -1,16 +1,20 @@
 arr = [1, 2, 3, 4, 5]
-segment_tree = [0 for x in range(10)]
+segment_tree = [0 for x in range(15)]
 
 
 def create_tree(arr, parent, node_type=None):
+
     if node_type == 'l':
+        print(arr, segment_tree, sum(arr))
         segment_tree[(2*parent)+1] = sum(arr)
     if node_type == 'r':
+        print(arr, segment_tree, sum(arr))
         segment_tree[(2*parent)+2] = sum(arr)
     if parent == -1:
         segment_tree[0] = sum(arr)
 
     if len(arr) == 1:
+
         return
     else:
         mid = len(arr)//2

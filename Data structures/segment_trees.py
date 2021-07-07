@@ -1,27 +1,22 @@
-arr = [1, 2, 3, 4, 5]
-segment_tree = [0 for x in range(15)]
+import math
+import os
 
+sample_arr = [1, 2, 5, 6, 7, 9]
+segment_tree = ["Dummy" for x in range(15)]
 
-def create_tree(arr, parent, node_type=None):
-
-    if node_type == 'l':
-        print(arr, segment_tree, sum(arr))
-        segment_tree[(2*parent)+1] = sum(arr)
-    if node_type == 'r':
-        print(arr, segment_tree, sum(arr))
-        segment_tree[(2*parent)+2] = sum(arr)
-    if parent == -1:
-        segment_tree[0] = sum(arr)
-
+def create_tree(arr, parent):
+    segment_tree[parent] = sum(arr)
+    print(arr, parent)
     if len(arr) == 1:
-
         return
     else:
-        mid = len(arr)//2
+        mid = math.ceil(len(arr) / 2)
         left = arr[:mid]
         right = arr[mid:]
+        create_tree(left, (2 * parent) + 1)
+        create_tree(right, (2 * parent) + 2)
 
-        create_tree(left, parent+1,'l')
-        create_tree(right, parent+1, 'r')
-create_tree(arr, -1, None)
+
+create_tree(sample_arr, 0)
 print(segment_tree)
+

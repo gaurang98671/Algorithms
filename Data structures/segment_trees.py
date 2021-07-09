@@ -20,3 +20,4 @@ def create_tree(arr, parent):
 create_tree(sample_arr, 0)
 print(segment_tree)
 
+

@@ -16,7 +16,7 @@ class Solution:
         last_node = node
 
         while node != None:
-
+            child_found = False
             if node.child != None:
 
                 l = self.flatten(node.child, 1)
@@ -29,10 +29,15 @@ class Solution:
                 if next_node != None:
                     next_node.prev = l
                 node.child = None
+                child_found = True
 
-            last_node = node
+            if child_found:
+                last_node = l
+                node = l.next
+            else:
+                last_node = node
 
-            node = node.next
+                node = node.next
 
         if n == 0:
             return head

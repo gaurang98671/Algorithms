@@ -1,19 +1,82 @@
-arr = [1, 6, 11, 5 ,7,9]
-arr = sorted(arr)
-print(arr)
-s = sum(arr)
-ptr = 0
-print(s)
-curr_sum = arr[0]
-min_sum = abs(curr_sum - (s-curr_sum))
+import uuid
+import random
 
-for i in range(1, len(arr)):
-    curr_sum += arr[i]
-    print(min_sum ,curr_sum, s-curr_sum)
+cls = [1, 2, 3]
+domain = ["ML", "Web", "Mobile", "Game", "IOT"]
+database = []
+groups = []
+n = 77
+for i in range(n):
+    id = str(uuid.uuid4())[:7]
+    dom = random.choice(domain)
+    c = random.choice(cls)
+    new_student = (id, c, dom)
+    database.append(new_student)
 
-    curr_diff = abs(curr_sum - (s - curr_sum))
-    print(curr_diff)
-    if curr_diff < min_sum:
-        min_sum = curr_diff
-        ptr = i
-print(arr[:ptr+1], arr[ptr+1:])
+
+
+# Need to create grp of 3
+# Need all class in grp
+# Need to have similar domain
+
+# making grps
+
+database.sort(key=lambda a: a[1])
+
+for i in database:
+    print(i)
+
+
+while len(database) >= 3:
+    first_member = database.pop(0)
+    score = 0
+    member = -1
+    req_domain = first_member[2]
+    if first_member[1] == 1:
+        req_class = 2
+    elif first_member[1] == 2:
+        req_class = 3
+    else:
+        req_class = -1
+
+    for i in range(len(database)):
+        curr_score = 0
+        if database[i][1] == req_class or req_class == -1:
+            curr_score += 2
+        if database[i][2] == req_domain:
+            curr_score += 1
+        if curr_score > score:
+            score = curr_score
+            member = i
+
+    if database[member][1]!= req_class:
+        second_member = database.pop(-1)
+    else:
+        second_member = database.pop(member)
+
+    score = 0
+    member = -1
+    req_domain = second_member[2]
+    if second_member[1] == 1:
+        req_class = 2
+    elif second_member[1] == 2:
+        req_class = 3
+    else:
+        req_class = -1
+
+    for i in range(len(database)):
+        curr_score = 0
+        if database[i][1] == req_class or req_class == -1:
+            curr_score += 2
+        if database[i][2] == req_domain:
+            curr_score += 1
+        if curr_score > score:
+            score = curr_score
+            member = i
+    third_member = database.pop(member)
+    groups.append([len(groups), first_member,second_member,third_member])
+
+print("Grps")
+for i in groups:
+    print(i)
+print(database)

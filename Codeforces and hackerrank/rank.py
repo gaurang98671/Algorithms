@@ -1,17 +1,12 @@
-arr = [54,66,23,21,44,21,23]
-arr.sort(reverse=1)
-rank = 1
-last = arr[0]
-ranks = [1]
-for i in arr[1:]:
-    if i == last:
-        ranks.append(rank)
+n =  int(input())
+ans = 0
 
+while n!=0:
+    if n%2 == 0:
+        n = n/2
+        ans += 1
     else:
-        last = i
-        rank += 1
-        ranks.append(rank)
-print(arr)
-print(
-
+        n -= 1
+        ans += 1
+print(ans)
 

@@ -2,7 +2,7 @@ import uuid
 import random
 
 cls = [1, 2, 3]
-domain = ["ML", "Web", "Mobile", "Game", "IOT"]
+domain = ["ML", "Web", "Mobile", "Game", "IOT", "ML", "ML"]
 database = []
 groups = []
 n = 77

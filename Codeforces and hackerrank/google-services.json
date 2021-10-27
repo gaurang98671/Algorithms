@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1019522139410",
+    "project_id": "aipl-f2835",
+    "storage_bucket": "aipl-f2835.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019522139410:android:f762d7efce3fa3850c5fcb",
+        "android_client_info": {
+          "package_name": "com.aipl.tracking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019522139410-7hkfq1nqguvgmnltkbfgbm2ddqcmt3v7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCXfbIRjrOGNDUi2kwJNgd0bD-j-h_i48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019522139410-7hkfq1nqguvgmnltkbfgbm2ddqcmt3v7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

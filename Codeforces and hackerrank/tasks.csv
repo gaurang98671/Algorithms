@@ -1,0 +1,8 @@
+Added on,Task title,Customer name,Customer Number,Customer Address,Task description,Task type,Start time,End time,Task status,Assigned by,Assigned to,Device Name,Device model,Task time
+01/11/21 07:47:32,TV repair,test,test,test,test,test,-,-,Assigned,Z1nLFMwzuGbF6HWtwJNXNA5CWzu2,S3iK2q6KEoMeSBnpUgykPpgiP1J3,test,test,tesst
+01/11/21 06:33:58,TV repair,Atharva patade,9876543210,test,test,test,01/11/21 06:36:06,01/11/21 06:36:08,completed,Z1nLFMwzuGbF6HWtwJNXNA5CWzu2,j88bfH5A9UgCRkMULzO5t3iuJJS2,test,test,test
+02/11/21 01:43:49,AC repair,test,test,test,test,test,-,-,pending,E499hOWq8wSxbkgliLa0HmaEOYv2,,test,test,test
+01/11/21 11:22:59,TV repair,test,test,test,test,test,01/11/21 11:24:29,01/11/21 11:25:10,completed,HPSwowC2HrctI3szpnovsd06dSF2,HPSwowC2HrctI3szpnovsd06dSF2,test,test,test
+06/10/21 04:26:13,Mobile repair,Gaurang pawar,9867660343,Testing,Testing,Mobile,07/10/21 05:55:29,07/10/21 05:57:10,completed,IlcyWEymrwYerarDDeCfZIiW9lv2,ls517hrR2dZxCImSDEYLRbRXZBi2,Oppo,A52,6/10/2021 5:30
+27/10/21 06:19:07,testing12,asd,asd,asd,asdasd,ads,27/10/21 06:21:11,27/10/21 06:50:00,completed,Z1nLFMwzuGbF6HWtwJNXNA5CWzu2,j88bfH5A9UgCRkMULzO5t3iuJJS2,asd,ad,asd
+28/10/21 09:56:58,ABC ,abc123,abc,abc,abc,abc,28/10/21 09:59:51,28/10/21 09:59:55,completed,Z1nLFMwzuGbF6HWtwJNXNA5CWzu2,j88bfH5A9UgCRkMULzO5t3iuJJS2,abc,abc,abc

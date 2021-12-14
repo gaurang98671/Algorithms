@@ -21,7 +21,7 @@ b = {'Z1nLFMwzuGbF6HWtwJNXNA5CWzu225-09-21': {'userID': 'Z1nLFMwzuGbF6HWtwJNXNA5
      'j88bfH5A9UgCRkMULzO5t3iuJJS230-09-21': {'date': '30/09/21', 'userID': 'j88bfH5A9UgCRkMULzO5t3iuJJS2'}}
 """
 y = 2021
-m = 10
+m = 11
 
 # Use the application default credentials
 cred = credentials.Certificate('.\\aipl-f2835-firebase-adminsdk-f7rcg-a9731ac613.json')
@@ -43,6 +43,9 @@ for day in range(1, num_days + 1):
         new_m = str(m)
     date = d + "-" + new_m + "-" + str(y)[-2:]
     days.append(date)
+
+#Get tasks
+tasks_database = db.collection("tasks").get()
 
 # Get all emps
 employee_database = db.collection("employee").get()
